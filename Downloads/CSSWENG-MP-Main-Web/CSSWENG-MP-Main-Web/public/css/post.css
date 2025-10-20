@@ -1,0 +1,83 @@
+body.post-body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5cfe3;
+  overflow-y: auto;
+}
+
+.post-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+}
+
+.post-article {
+  width: 700px;
+  height: 800px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.post-confirm {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.post-confirm h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.post-confirm p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.choice {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.choice a,
+.choice button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  font-family: inherit;
+}
+
+.yes-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.no-btn {
+  background-color: #888;
+  color: white;
+}
+
+.yes-btn:hover {
+  background-color: #45a045;
+}
+
+.no-btn:hover {
+  background-color: #666;
+}

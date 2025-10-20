@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="js/login.js" defer></script>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div id="login-container">
+        <img id="logo" src="../assets/logo.png" alt="">
+        <div id="forms-container">
+            <form id="forms" action="/login" method="POST">
+                <div id="form-layout">
+                    <div class="field">
+                        <label class="input-label" for="email">Email</label>
+                        <input name="email" id="email" class="input-box" type="text" placeholder="JohnSmith@gmail.com">
+                    </div>
+                    <div class="field">
+                        <label class="input-label" for="password">Password</label>
+                        <input name="password" id="password" class="input-box" type="password" placeholder="123456789">
+                    </div>
+                    <button id="login-button">Sign in</button>
+                </div>
+            </form>
+            <a href="/forgot" id="forgot-password">
+                Forgot Password?
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

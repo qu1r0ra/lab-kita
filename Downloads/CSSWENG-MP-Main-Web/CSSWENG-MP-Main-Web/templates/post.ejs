@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Confirmation</title>
+  <link rel="stylesheet" href="/css/post.css">
+</head>
+<body class="post-body">
+  <div class="post-wrapper">
+
+    <div class="post-article">
+      <h2>Article Preview</h2>
+      <p>This is where the article content will appear after posting.</p>
+    </div>
+
+    <div class="post-confirm">
+      <h3>Publish article?</h3>
+      <p>Are you ready to post this?</p>
+      <div class="choice">
+        <form action="/view" method="POST">
+          <button type="submit" class="yes-btn">Yes</button>
+        </form>
+        <a href="/create" class="no-btn">No</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/drafts.css">
+    <script src="js/draftActions.js" defer></script>
+    <script src="js/draftSort.js" defer></script>
+    <title>Draft Page</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="navbar">
+            <a href="">
+                <div id="navbar-logo-container" class="navbutton">
+                    <img id="navbar-logo" class="icon" src="assets/logo.png" alt="">
+                </div>
+            </a>
+            <a href="/drafts">
+                <div id="selected" class="navbutton">
+                    <img class="nav-icon" src="assets/folder-gray.png" alt="">
+                    <p class="nav-title">Drafts</p>
+                </div>
+            </a>
+            <a href="/views">
+                <div class="navbutton">
+                    <img class="nav-icon" src="assets/view-gray.png" alt="">
+                    <p class="nav-title">View</p>
+                </div>
+            </a>
+            <a href="/users">
+                <div class="navbutton">
+                    <img class="nav-icon" src="assets/user-gray.png" alt="">
+                    <p class="nav-title">Users</p>
+                </div>
+            </a>
+            <a href="/logout" id="logout-container">
+                <div class="navbutton">
+                    <img id="logout-icon" class="nav-icon" src="assets/logout-icon.png" alt="">
+                    <p class="nav-title">Log Out</p>
+                </div>
+            </a>
+        </div>
+        
+        <div id="right-container">
+            <div id="search-container">
+                <img id="search-icon" src="assets/search-gray.png" alt="">
+                <input id="search-bar" type="text" placeholder="Search for Articles...">
+            </div>
+            <div id="list-container">
+                <div id="column-name-container">
+                    <div class="date cell title">
+                        Date Created
+                        <img class="sort-date sort-icon clickable" data-direction="asc" src="assets/arrow-upward.png"
+                            alt="">
+                    </div>
+                    <div class="article cell title">
+                        Article Title
+                        <img class="sort-title sort-icon clickable" data-direction="asc" src="assets/arrow-upward.png"
+                            alt="">
+                    </div>
+                    <div class="status cell title">
+                        Status
+                        <img class="sort-status sort-icon clickable" data-direction="asc" src="assets/arrow-upward.png"
+                            alt="">
+                    </div>
+                    <div class="spacing-div cell title">
+
+                    </div>
+                </div>
+                <div id="list-items-container" data-version="original">
+                    <div class="list-item">
+                        <div class="date cell date-item">
+                            02/14/2004
+                        </div>
+                        <div class="article cell article-item">Fire</div>
+                        <div class="status cell status-item">
+                            <div class="status-info finished">
+                                Finished
+                            </div>
+                        </div>
+                        <div class="spacing-div cell">
+                            <img class="duplicate-icon clickable" src="assets/duplicate-draft.png" alt="">
+                            <img class="delete-icon clickable" src="assets/delete-draft.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date cell date-item">
+                            10/10/2026
+                        </div>
+                        <div class="article cell article-item">Air</div>
+                        <div class="status cell status-item">
+                            <div class="status-info finished">
+                                Finished
+                            </div>
+                        </div>
+                        <div class="spacing-div cell">
+                            <img class="duplicate-icon clickable" src="assets/duplicate-draft.png" alt="">
+                            <img class="delete-icon clickable" src="assets/delete-draft.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date cell date-item">
+                            03/01/2005
+                        </div>
+                        <div class="article cell article-item">Lightning</div>
+                        <div class="status cell status-item">
+                            <div class="status-info finished">
+                                Finished
+                            </div>
+                        </div>
+                        <div class="spacing-div cell">
+                            <img class="duplicate-icon clickable" src="assets/duplicate-draft.png" alt="">
+                            <img class="delete-icon clickable" src="assets/delete-draft.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date cell date-item">
+                            08/09/2000
+                        </div>
+                        <div class="article cell article-item">Earth</div>
+                        <div class="status cell status-item">
+                            <div class="status-info unfinished">
+                                Unfinished
+                            </div>
+                        </div>
+                        <div class="spacing-div cell">
+                            <img class="duplicate-icon clickable" src="assets/duplicate-draft.png" alt="">
+                            <img class="delete-icon clickable" src="assets/delete-draft.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="date cell date-item">
+                            10/10/2021
+                        </div>
+                        <div class="article cell article-item">Water</div>
+                        <div class="status cell">
+                            <div class="status-info unfinished">
+                                Unfinished
+                            </div>
+                        </div>
+                        <div class="spacing-div cell">
+                            <img class="duplicate-icon clickable" src="assets/duplicate-draft.png" alt="">
+                            <img class="delete-icon clickable" src="assets/delete-draft.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="new-article-container">
+                <button id="add-new-article-button" class="clickable">
+                    Add Article
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="modal">
+            <h2 id="confirmation-message">Do you want to <span id="action-container-span"></span> "<span
+                    id="article-title-span"></span>"?</h2>
+            <div id="confirmation-buttons-container">
+                <button id="confirmation-yes" class="clickable modal-action yes">Yes</button>
+                <button id="confirmation-no" class="clickable modal-action no">No</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

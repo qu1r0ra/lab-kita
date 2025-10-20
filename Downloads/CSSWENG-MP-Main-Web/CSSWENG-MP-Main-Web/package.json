@@ -1,0 +1,25 @@
+{
+  "name": "cssweng-mp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Renzoki/CSSWENG-MP.git"
+  },
+  "author": "Renz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Renzoki/CSSWENG-MP/issues"
+  },
+  "homepage": "https://github.com/Renzoki/CSSWENG-MP#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "handlebars": "^4.7.8",
+    "mongoose": "^8.16.1"
+  }
+}
